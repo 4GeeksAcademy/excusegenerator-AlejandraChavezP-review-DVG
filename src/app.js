@@ -17,15 +17,16 @@ let when = [
 ];
 
 function generateExcuse() {
-  let randomwho = who[Math.floor(Math.random() * who.lenght)];
-  let randomaction = action[Math.floor(Math.random() * action.lenght)];
-  let randomwhat = what[Math.floor(Math.random() * what.lenght)];
-  let randomwhen = when[Math.floor(Math.random() * when.lenght)];
+  let randomwho = who[Math.floor(Math.random() * who.length)];
+  let randomaction = action[Math.floor(Math.random() * action.length)];
+  let randomwhat = what[Math.floor(Math.random() * what.length)];
+  let randomwhen = when[Math.floor(Math.random() * when.length)];
 
   return randomwho + " " + randomaction + " " + randomwhat + " " + randomwhen;
 }
 
 window.onload = function() {
   let excuse = generateExcuse();
+  console.log(excuse);
   document.querySelector("#excuse").innerHTML = excuse;
 };
